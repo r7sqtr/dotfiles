@@ -2,24 +2,6 @@ local wezterm = require("wezterm")
 local ui = {}
 
 function ui.setup(config)
-	-- UI Theme
-	-- config.color_scheme = "Aurora"
-	config.color_scheme = "ayu"
-	-- config.color_scheme = "Ayu Mirage (Gogh)"
-	-- config.color_scheme = "Ef-Winter"
-	-- config.color_scheme = "Catppuccin Frappe"
-	-- config.color_scheme = "Catppuccin Mocha (Gogh)"
-	-- config.color_scheme = "Chester"
-	-- config.color_scheme = "Everforest Dark Hard (Gogh)"
-	-- config.color_scheme = "Galaxy"
-	-- config.color_scheme = "Iceberg (Gogh)"
-	-- config.color_scheme = "Sandcastle (base16)"
-	-- config.color_scheme = 'Solarized Dark (Gogh)'
-	-- config.color_scheme = "UnderTheSea"
-	-- config.color_scheme = "Kanagawa (Gogh)"
-	-- config.color_scheme = "nord"
-	-- config.color_scheme = "Ciapre"
-
 	-- Background
 	config.window_background_opacity = 0.92
 	config.macos_window_background_blur = 10
@@ -41,10 +23,6 @@ function ui.setup(config)
 	-- Cursor
 	config.default_cursor_style = "SteadyUnderline"
 
-	-- Tab Styles
-	local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
-	local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
-
 	-- Process icon mapping
 	local function get_process_icon(process_name)
 		local icons = {
@@ -63,7 +41,7 @@ function ui.setup(config)
 		return icons[process_name] or wezterm.nerdfonts.cod_terminal
 	end
 
-	wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+	wezterm.on("format-tab-title", function(tab, _, _, _, hover, _)
 		-- Ayu dark theme colors
 		local colors = {
 			active_bg = "#ffcc66", -- Ayu accent yellow
@@ -84,9 +62,6 @@ function ui.setup(config)
 			background = colors.hover_bg
 			foreground = colors.hover_fg
 		end
-
-		local edge_background = "none"
-		local edge_foreground = background
 
 		-- Get process name and icon
 		local process_name = tab.active_pane.foreground_process_name

@@ -67,7 +67,7 @@ return {
 					["gA"] = "git_add_all",
 					["ga"] = "git_add_file",
 					["gu"] = "git_unstage_file",
-          ["gU"] = "git_unstage_all",
+					["gU"] = "git_unstage_all",
 					["gr"] = "git_revert_file",
 					["gc"] = "git_commit",
 					["gp"] = "git_push",

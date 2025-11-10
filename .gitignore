@@ -1,0 +1,14 @@
+.DS_Store
+github-copilot
+gtk-2.0
+nvim/lazyvim.json
+nvim/lazy-lock.json
+
+karabiner/
+psysh/
+starship/
+waveterm/
+zed/
+git/
+raycast/
+starship.toml
