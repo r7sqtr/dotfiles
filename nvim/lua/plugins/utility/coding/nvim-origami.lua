@@ -15,7 +15,10 @@ return {
 	},
 
 	init = function()
+		-- When folding is enabled, start with all folds open
 		vim.opt.foldlevel = 99
 		vim.opt.foldlevelstart = 99
+		-- Use manual or marker-based folding instead of automatic
+		vim.opt.foldmethod = "manual"
 	end,
 }

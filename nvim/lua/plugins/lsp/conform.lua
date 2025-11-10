@@ -79,7 +79,7 @@ return {
 			},
 			yaml = {
 				"prettierd",
-				("prettier"),
+				"prettier",
 				stop_after_first = true,
 			},
 			zsh = { "beautysh", "shfmt" },

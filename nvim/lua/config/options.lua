@@ -1,7 +1,6 @@
 -- 基本設定
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.opt.modifiable = true
 vim.opt.clipboard = "unnamedplus"
 vim.g.format_on_save = false
 

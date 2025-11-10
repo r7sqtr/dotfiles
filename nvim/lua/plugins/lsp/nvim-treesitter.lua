@@ -20,6 +20,7 @@ return {
 			ensure_installed = {
 				"html",
 				"css",
+				"vue", -- Vue 2 & Vue 3
 				"blade",
 				"php",
 				"javascript",
