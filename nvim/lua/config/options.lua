@@ -1,6 +1,6 @@
 -- 基本設定
 vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
+vim.opt.fileencodings = "utf-8,sjis,euc-jp,latin1" -- デフォルトのエンコーディング候補
 vim.opt.clipboard = "unnamedplus"
 vim.g.format_on_save = false
 
@@ -11,7 +11,7 @@ vim.opt.title = true
 vim.opt.cursorline = true
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 3
+-- vim.opt.laststatus = 3
 vim.opt.scrolloff = 15
 vim.opt.wrap = false
 vim.opt.fillchars = { eob = " " }
@@ -48,26 +48,9 @@ vim.opt.splitright = true
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = "a"
 
--- 診断・LSP
-local sev = vim.diagnostic.severity
-vim.diagnostic.config({
-	virtual_text = {
-		prefix = "▎",
-		spacing = 2,
-		severity = { min = sev.WARN },
-	},
-	signs = {
-		text = {
-			[sev.ERROR] = "▐",
-			[sev.WARN] = "▐",
-			[sev.HINT] = "▐",
-			[sev.INFO] = "▐",
-		},
-	},
-	underline = true,
-	update_in_insert = false,
-	severity_sort = true,
-})
+vim.opt.laststatus = 0
+vim.opt.statusline = "─"
+vim.opt.fillchars:append({ stl = "─", stlnc = "─" })
 
 -- フォーマットオプション
 vim.opt.formatoptions:append({ "r" })

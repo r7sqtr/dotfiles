@@ -6,6 +6,17 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
+		-- Diagnostic signs
+		vim.diagnostic.config({
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "󰬌",
+					[vim.diagnostic.severity.WARN] = "󰬞",
+					[vim.diagnostic.severity.INFO] = "󰬐",
+					[vim.diagnostic.severity.HINT] = "󰬏",
+				},
+			},
+		})
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
