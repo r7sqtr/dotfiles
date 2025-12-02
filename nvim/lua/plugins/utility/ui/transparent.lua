@@ -4,11 +4,9 @@ return {
 	enabled = true,
 	config = function()
 		require("transparent").clear_prefix("WinBar")
-		require("transparent").clear_prefix("Navic")
 		require("transparent").clear_prefix("Float")
 		require("transparent").clear_prefix("Normal")
 		require("transparent").clear_prefix("Noice")
-		require("transparent").clear_prefix("GitSigns")
 		require("transparent").clear_prefix("NeoTree")
 		require("transparent").clear_prefix("Mini")
 		require("transparent").clear_prefix("BufferLine")
@@ -42,13 +40,20 @@ return {
 				"HoverNormal",
 			},
 			extra_groups = {
-				"OctoEditable",
 				"EndOfBuffer",
 				"Search",
 				"Cursor",
 				"LazyNormal",
 			},
-			exclude_groups = {}, -- groups you don't want to clear
+			exclude_groups = {
+				"Cursor",
+				"CursorLine",
+				"CursorLineNr",
+				"ModesCopy",
+				"ModesDelete",
+				"ModesInsert",
+				"ModesVisual",
+			},
 			on_clear = function() end,
 		})
 	end,

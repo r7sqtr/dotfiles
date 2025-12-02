@@ -20,27 +20,13 @@ return {
 			end,
 			desc = "Grep",
 		},
-		-- {
-		-- 	"<leader>e",
-		-- 	function()
-		-- 		Snacks.explorer()
-		-- 	end,
-		-- 	desc = "File Explorer",
-		-- },
-		-- {
-		-- 	"<leader>fb",
-		-- 	function()
-		-- 		Snacks.picker.git_branches()
-		-- 	end,
-		-- 	desc = "Git Branches",
-		-- },
-		-- {
-		-- 	"<leader>fp",
-		-- 	function()
-		-- 		Snacks.picker.projects()
-		-- 	end,
-		-- 	desc = "Projects",
-		-- },
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
 		{
 			"gd",
 			function()
@@ -56,20 +42,53 @@ return {
 			nowait = true,
 			desc = "Goto References",
 		},
+		{
+			"<leader>zn",
+			function()
+				Snacks.zen()
+			end,
+			desc = "Toggle Zen Mode",
+		},
 	},
 	opts = {
-		indent = { enabled = false },
+		indent = { enabled = true },
 		image = { enabled = false },
 		input = { enabled = false },
 		notifier = { enabled = false },
 		scope = { enabled = false },
-		scroll = { enabled = false },
+		animate = {
+			duration = { step = 10, total = 200 },
+			easing = "linear",
+		},
+		animate_repeat = {
+			delay = 100,
+			duration = { step = 5, total = 50 },
+			easing = "linear",
+		},
+		scroll = { enabled = true },
 		statuscolumn = { enabled = false },
 		words = { enabled = false },
+		zen = {
+			enabled = true,
+			toggles = {
+				dim = true,
+				git_signs = true,
+				mini_diff_signs = false,
+				diagnostics = true,
+				inlay_hints = false,
+			},
+			show = {
+				statusline = false,
+				tabline = true,
+			},
+			center = true,
+		},
 		include = { "*" },
 		exclude = { ".git", "node_modules", "dist", ".DS_Store" },
 		picker = {
 			enabled = true,
+			hidden = true, -- Set to true to display hidden files (e.g., .git)
+			ignored = true, -- Set to true to display files ignored by .gitignore
 			matcher = {
 				fuzzy = true, -- use fuzzy matching
 				smartcase = true, -- use smartcase
@@ -215,13 +234,14 @@ return {
 			},
 		},
 		explorer = {
-			enabled = false,
+			enabled = true,
 			position = "left",
 			width = 40,
 			open_on_startup = false,
 			open_on_current_file = false,
 			follow_current_file = false,
 			show_hidden_files = true,
+			show_ignored_files = true,
 			show_git_status = true,
 			show_root = true,
 		},

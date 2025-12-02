@@ -18,6 +18,8 @@ return {
         "onedark",
         "solarized-osaka",
         "tokyonight",
+        "palenight",
+        "everblush",
       },
 		}
 	end,

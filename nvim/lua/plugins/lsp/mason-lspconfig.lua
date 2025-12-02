@@ -27,9 +27,8 @@ return {
 				"cssls", -- CSS
 				"ts_ls", -- TypeScript/JavaScript
 
-				-- Vue.js (both Vue 2 and Vue 3)
-				"vuels", -- Vue 2 (Vetur) - for Nuxt 2 projects
-				"vue_ls", -- Vue 3 - for Nuxt 3 and Vue 3 projects
+				-- Vue.js
+				"vue_ls", -- Vue 3 (Volar) - for Nuxt 3 and Vue 3 projects
 
 				-- Backend & Templating
 				"intelephense", -- PHP

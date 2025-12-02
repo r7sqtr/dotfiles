@@ -1,0 +1,3 @@
+return {
+	"alexmozaidze/palenight.nvim",
+}
