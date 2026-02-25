@@ -46,6 +46,18 @@ return {
 					auto_scroll = true,
 				},
 			},
+			-- アダプター設定でモデルを固定
+			adapters = {
+				copilot = function()
+					return require("codecompanion.adapters").extend("copilot", {
+						schema = {
+							model = {
+								default = "gpt-5-mini",
+							},
+						},
+					})
+				end,
+			},
 			prompt_library = {
 				["Optimize"] = {
 					strategy = "chat",
@@ -58,48 +70,6 @@ return {
 						{
 							role = "user",
 							content = "選択したコードを最適化し、パフォーマンスと可読性を向上させてください。",
-						},
-					},
-				},
-			},
-			strategies = {
-				chat = {
-					slash_commands = {
-						["buffer"] = {
-							opts = {
-								provider = "snacks",
-							},
-						},
-						["file"] = {
-							opts = {
-								provider = "snacks",
-							},
-						},
-						["help"] = {
-							opts = {
-								provider = "snacks",
-							},
-						},
-						["symbols"] = {
-							opts = {
-								provider = "snacks",
-							},
-						},
-						["workspace"] = {
-							opts = {
-								provider = "snacks",
-							},
-						},
-					},
-					roles = {
-						llm = function(adapter)
-							return "Chat(" .. adapter.formatted_name .. ")"
-						end,
-						user = " Me",
-					},
-					keymaps = {
-						send = {
-							modes = { n = "<C-CR>", i = "<C-CR>" }, -- Ctrl+Enter
 						},
 					},
 				},

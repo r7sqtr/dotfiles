@@ -56,5 +56,6 @@ return {
 			},
 			on_clear = function() end,
 		})
+		vim.cmd("TransparentDisable")
 	end,
 }

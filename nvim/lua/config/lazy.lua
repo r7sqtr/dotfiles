@@ -37,4 +37,23 @@ require("lazy").setup({
 		enabled = true,
 		notify = false,
 	},
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
+	},
+	-- profiling.require = true causes issues with vim.* modules in Neovim 0.11+
+	-- profiling = {
+	-- 	loader = true,
+	-- 	require = true,
+	-- },
 })

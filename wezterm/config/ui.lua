@@ -12,10 +12,16 @@ function ui.setup(config)
 	config.window_frame = { inactive_titlebar_bg = "none", active_titlebar_bg = "none" }
 
 	-- Tab bar
+	config.enable_tab_bar = true
 	config.hide_tab_bar_if_only_one_tab = true
 	config.tab_bar_at_bottom = true
 	config.show_new_tab_button_in_tab_bar = false
 	config.use_fancy_tab_bar = false
+
+	-- Tab reordering keybindings
+	config.keys = config.keys or {}
+	table.insert(config.keys, { key = "LeftArrow", mods = "CTRL|SHIFT", action = wezterm.action.MoveTabRelative(-1) })
+	table.insert(config.keys, { key = "RightArrow", mods = "CTRL|SHIFT", action = wezterm.action.MoveTabRelative(1) })
 
 	-- Performance
 	config.max_fps = 144

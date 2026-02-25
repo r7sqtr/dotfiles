@@ -1,10 +1,10 @@
 return {
-	-- gcc -> current line
-	-- gbc -> block
 	"numToStr/Comment.nvim",
-	lazy = false,
-	enabled = true,
-	config = function()
-		require("Comment").setup()
-	end,
+	keys = {
+		{ "gcc", mode = "n", desc = "Comment toggle current line" },
+		{ "gc", mode = { "n", "v" }, desc = "Comment toggle linewise" },
+		{ "gb", mode = { "n", "v" }, desc = "Comment toggle blockwise" },
+		{ "gbc", mode = "n", desc = "Comment toggle current block" },
+	},
+	opts = {},
 }

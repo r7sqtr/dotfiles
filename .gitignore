@@ -1,13 +1,36 @@
-.DS_Store
-github-copilot
-gtk-2.0
+# 全てを無視
+*
+
+# wezterm と nvim は追跡対象
+!wezterm/
+!wezterm/**
+!nvim/
+!nvim/**
+!zsh/
+zsh/.zsh_history
+zsh/.zcompdump
+!zsh/**
+
+# Claude Code 設定（ホワイトリスト方式）
+!claude/
+!claude/CLAUDE.md
+!claude/settings.json
+!claude/statusline-command.sh
+!claude/rules/
+!claude/rules/**
+!claude/agents/
+!claude/agents/**
+!claude/scripts/
+!claude/scripts/**
+!claude/docs/
+!claude/docs/**
+!claude/skills/
+!claude/skills/**
+
+# .gitignore 自体と README も追跡
+!.gitignore
+!README.md
+
+# nvim 内で無視するファイル
 nvim/lazyvim.json
 nvim/lazy-lock.json
-
-karabiner/
-psysh/
-starship/
-waveterm/
-zed/
-raycast/
-starship.toml

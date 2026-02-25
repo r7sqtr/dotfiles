@@ -1,55 +1,23 @@
 return {
 	"folke/sidekick.nvim",
 	enabled = true,
-	event = "VeryLazy",
-	cmds = { "Sidekick" },
+	cmd = { "Sidekick" },
 	---@class sidekick.Config
 	opts = {
 		nes = { enabled = false },
 		cli = {
 			mux = {
-				enabled = true,
-				create = "window",
+				enabled = false,
 			},
 		},
 	},
 	keys = {
 		{
-			"<c-.>",
-			function()
-				require("sidekick.cli").toggle()
-			end,
-			desc = "Sidekick Toggle",
-			mode = { "n", "t", "i", "x" },
-		},
-		{
-			"<c-,>",
-			function()
-				require("sidekick.nes").apply()
-			end,
-			desc = "Sidekick NES Apply",
-		},
-		{
-			"<leader>aa",
+			"<leader>ac",
 			function()
 				require("sidekick.cli").toggle()
 			end,
 			desc = "Sidekick Toggle CLI",
-		},
-		{
-			"<leader>as",
-			function()
-				require("sidekick.cli").select()
-			end,
-			desc = "Select CLI",
-		},
-		{
-			"<leader>at",
-			function()
-				require("sidekick.cli").send({ msg = "{this}" })
-			end,
-			mode = { "x", "n" },
-			desc = "Send This",
 		},
 		{
 			"<leader>af",
@@ -76,7 +44,7 @@ return {
 		},
 		-- Example of a keybinding to open Claude directly
 		{
-			"<leader>ac",
+			"<leader>aa",
 			function()
 				require("sidekick.cli").toggle({ name = "claude", focus = true })
 			end,

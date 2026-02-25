@@ -6,20 +6,20 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	keys = {
-		{
-			"<leader><space>",
-			function()
-				Snacks.picker.files()
-			end,
-			desc = "Find Files",
-		},
-		{
-			"<leader>/",
-			function()
-				Snacks.picker.grep()
-			end,
-			desc = "Grep",
-		},
+		-- {
+		-- 	"<leader><space>",
+		-- 	function()
+		-- 		Snacks.picker.files()
+		-- 	end,
+		-- 	desc = "Find Files",
+		-- },
+		-- {
+		-- 	"<leader>/",
+		-- 	function()
+		-- 		Snacks.picker.grep()
+		-- 	end,
+		-- 	desc = "Grep",
+		-- },
 		{
 			"<leader>e",
 			function()
@@ -27,21 +27,21 @@ return {
 			end,
 			desc = "File Explorer",
 		},
-		{
-			"gd",
-			function()
-				Snacks.picker.lsp_definitions()
-			end,
-			desc = "Goto Definition",
-		},
-		{
-			"gr",
-			function()
-				Snacks.picker.lsp_references()
-			end,
-			nowait = true,
-			desc = "Goto References",
-		},
+		-- {
+		-- 	"gd",
+		-- 	function()
+		-- 		Snacks.picker.lsp_definitions()
+		-- 	end,
+		-- 	desc = "Goto Definition",
+		-- },
+		-- {
+		-- 	"gr",
+		-- 	function()
+		-- 		Snacks.picker.lsp_references()
+		-- 	end,
+		-- 	nowait = true,
+		-- 	desc = "Goto References",
+		-- },
 		{
 			"<leader>zn",
 			function()
@@ -56,6 +56,7 @@ return {
 		input = { enabled = false },
 		notifier = { enabled = false },
 		scope = { enabled = false },
+		lazygit = { enabled = true },
 		animate = {
 			duration = { step = 10, total = 200 },
 			easing = "linear",
@@ -249,24 +250,35 @@ return {
 			enabled = true,
 			preset = {
 				keys = {
-					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+					{
+						icon = " ",
+						key = "f",
+						desc = "Find File",
+						action = ":lua require('fzf-lua').files()",
+					},
 					{
 						icon = " ",
 						key = "g",
 						desc = "Find Text",
-						action = ":lua Snacks.dashboard.pick('live_grep')",
+						action = ":lua require('fzf-lua').live_grep()",
 					},
 					{
 						icon = " ",
 						key = "p",
-						desc = "project",
+						desc = "Projects",
 						action = ":lua Snacks.picker.projects()",
 					},
 					{
 						icon = " ",
 						key = "r",
 						desc = "Recent Files",
-						action = ":lua Snacks.dashboard.pick('oldfiles')",
+						action = ":lua require('fzf-lua').oldfiles()",
+					},
+					{
+						icon = " ",
+						key = "c",
+						desc = "Config",
+						action = ":lua require('fzf-lua').files({ cwd = vim.fn.stdpath('config') })",
 					},
 					{ icon = " ", key = "s", desc = "Restore Session", section = "session" },
 					{ icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },

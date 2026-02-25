@@ -16,6 +16,15 @@ return {
 					[vim.diagnostic.severity.HINT] = "󰬏",
 				},
 			},
+			virtual_text = false, -- lsp_linesを使うのでオフ
+			virtual_lines = true, -- lsp_lines用
+			underline = true,
+			float = {
+				border = "rounded",
+				source = true,
+			},
+			severity_sort = true,
+			update_in_insert = false,
 		})
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())

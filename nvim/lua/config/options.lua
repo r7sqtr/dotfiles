@@ -40,7 +40,14 @@ vim.opt.swapfile = false
 
 -- ファイル探索
 vim.opt.path:append({ "**" })
-vim.opt.wildignore:append({ "*/node_modules/*" })
+vim.opt.wildignore:append({
+	"*/node_modules/*",
+	"*/vendor/*",
+	"*.png",
+  "*.jpg",
+  "*.webp",
+  "*.svg",
+})
 
 -- ウィンドウ分割・UI
 vim.opt.splitbelow = true

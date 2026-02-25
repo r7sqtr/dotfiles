@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "WebSearch",
+      "Bash(nvim:*)",
+      "Bash(tree:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(tmux list-sessions:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "mcp__plugin_serena_serena__read_file",
+      "mcp__plugin_serena_serena__activate_project",
+      "mcp__plugin_serena_serena__create_text_file",
+      "mcp__plugin_serena_serena__replace_content",
+      "mcp__plugin_serena_serena__think_about_whether_you_are_done",
+      "mcp__plugin_serena_serena__find_symbol",
+      "mcp__plugin_serena_serena__check_onboarding_performed",
+      "mcp__plugin_serena_serena__think_about_task_adherence",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(brew list:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
