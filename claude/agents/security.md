@@ -2,7 +2,6 @@
 name: security
 description: セキュリティ脆弱性の検出、OWASP Top 10 の監査、依存関係の脆弱性チェック、セキュリティベストプラクティスの提案を行うエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: red
 ---
 

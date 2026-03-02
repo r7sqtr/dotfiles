@@ -2,7 +2,6 @@
 name: vuejs
 description: Vue.js (Vue 3 / Nuxt 3) の実装、コンポーネント設計、状態管理、パフォーマンス最適化を行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: green
 ---
 

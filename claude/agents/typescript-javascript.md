@@ -2,7 +2,6 @@
 name: typescript-javascript
 description: TypeScript/JavaScript の実装、デバッグ、リファクタリング、型設計、パフォーマンス最適化を行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: blue
 ---
 

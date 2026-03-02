@@ -2,7 +2,6 @@
 name: linux
 description: Linux サーバー管理、シェルスクリプト、システム管理、トラブルシューティングを行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: yellow
 ---
 

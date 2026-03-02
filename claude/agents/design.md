@@ -2,7 +2,6 @@
 name: design
 description: UI/UX デザイン、デザインシステム、ユーザビリティ分析、プロトタイプ設計を行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: magenta
 ---
 

@@ -2,7 +2,6 @@
 name: devops
 description: CI/CD パイプライン、コンテナオーケストレーション、インフラ自動化、モニタリングを行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: gray
 ---
 

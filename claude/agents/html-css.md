@@ -2,7 +2,6 @@
 name: html-css
 description: HTML/CSS のマークアップ、レスポンシブデザイン、アクセシビリティ、CSS 設計を行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: pink
 ---
 

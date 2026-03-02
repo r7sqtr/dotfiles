@@ -2,7 +2,7 @@
 name: code-review
 description: バグ、ロジックエラー、セキュリティ脆弱性、コード品質、プロジェクト規約への準拠を信頼度スコア付きでレビューするエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
+model: haiku
 color: red
 ---
 

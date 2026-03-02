@@ -2,7 +2,6 @@
 name: aws
 description: AWS サービスの設計、構築、トラブルシューティング、コスト最適化を行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: orange
 ---
 

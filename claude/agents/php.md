@@ -2,7 +2,6 @@
 name: php
 description: PHP の実装、デバッグ、リファクタリングを行うエキスパートエージェント。Laravel、Composer、PSR 標準に精通
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: purple
 ---
 

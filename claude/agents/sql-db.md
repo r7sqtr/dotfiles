@@ -2,7 +2,6 @@
 name: sql-db
 description: SQL クエリ最適化、データベース設計、マイグレーション、パフォーマンスチューニングを行うエキスパートエージェント
 tools: Glob, Grep, LS, Read, WebFetch, WebSearch, Bash, BashOutput, KillShell
-model: sonnet
 color: cyan
 ---
 
