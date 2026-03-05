@@ -53,7 +53,14 @@ BLOCKED_PATTERNS=(
     '\bkillall\b'
 
     # 4. 機密情報漏洩リスク
-    'cat\s+\.env'
+    # .env ファイル読み取り（各種コマンド）
+    'cat\s+(.*\/)?\.env'
+    '(head|tail|less|more|bat|nl)\s+(.*\/)?\.env'
+    '(source|\.)\s+(.*\/)?\.env'
+    '(base64|xxd|od|strings)\s+(.*\/)?\.env'
+    '(sed|awk|perl|ruby|python[23]?)\s.*(.*\/)?\.env'
+    '(cp|mv)\s+(.*\/)?\.env'
+    '<\s*(.*\/)?\.env'
     'cat\s+.*credentials'
     'curl\s+.*-X\s*POST.*http'
     'wget\s+.*--post-data'

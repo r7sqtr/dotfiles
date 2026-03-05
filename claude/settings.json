@@ -65,7 +65,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "~/.claude/statusline-command.sh"
+    "command": "~/.claude/scripts/statusline-command.sh"
   },
   "enabledPlugins": {
     "php-lsp@claude-plugins-official": true,
@@ -78,5 +78,37 @@
     "rust-analyzer-lsp@claude-plugins-official": true
   },
   "language": "日本語",
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "gist.github.com",
+        "api.github.com",
+        "*.npmjs.org",
+        "registry.yarnpkg.com",
+        "registry.npmjs.org",
+        "pypi.org",
+        "files.pythonhosted.org",
+        "crates.io",
+        "packagist.org",
+        "repo.packagist.org"
+      ]
+    },
+    "filesystem": {
+      "allowWrite": [
+        "//tmp"
+      ],
+      "denyRead": [
+        "~/.aws/credentials",
+        "~/.ssh/id_*",
+        "~/.config/gh/hosts.yml",
+        "~/.docker/config.json",
+        "**/.env*",
+        "~/.composer/auth.json"
+      ]
+    }
+  },
   "alwaysThinkingEnabled": true
 }
