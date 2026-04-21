@@ -10,6 +10,7 @@
 zsh/.zsh_history
 zsh/.zcompdump
 !zsh/**
+zsh/conf.d/aliases.zsh
 
 # Claude Code 設定（ホワイトリスト方式）
 !claude/
