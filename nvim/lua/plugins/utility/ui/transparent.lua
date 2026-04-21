@@ -56,6 +56,9 @@ return {
 			},
 			on_clear = function() end,
 		})
-		vim.cmd("TransparentDisable")
+		-- キャッシュから復元された透過状態を尊重し、有効なら setup 後に再適用
+		if vim.g.transparent_enabled then
+			require("transparent").clear()
+		end
 	end,
 }

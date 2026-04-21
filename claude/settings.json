@@ -9,33 +9,28 @@
       "Task",
       "Skill",
       "WebSearch",
-      "WebFetch(domain:github.com)",
       "Bash(cd *)",
       "Bash(find:*)",
       "Bash(echo:*)",
       "Bash(chmod:*)",
       "Bash(mkdir:*)",
-      "Bash(~/.claude/scripts/blocked-commands.sh)",
-      "mcp__plugin_serena_serena__read_*",
-      "mcp__plugin_serena_serena__list_*",
-      "mcp__plugin_serena_serena__find_*",
-      "mcp__plugin_serena_serena__search_*",
-      "mcp__plugin_serena_serena__get_*",
-      "mcp__plugin_serena_serena__replace_*",
-      "mcp__plugin_serena_serena__insert_*",
-      "mcp__plugin_serena_serena__create_*",
-      "mcp__plugin_serena_serena__rename_*",
-      "mcp__plugin_serena_serena__write_*",
-      "mcp__plugin_serena_serena__edit_*",
-      "mcp__plugin_serena_serena__delete_*",
-      "mcp__plugin_serena_serena__open_*",
-      "mcp__plugin_serena_serena__activate_*",
-      "mcp__plugin_serena_serena__switch_*",
-      "mcp__plugin_serena_serena__check_*",
-      "mcp__plugin_serena_serena__onboarding",
-      "mcp__plugin_serena_serena__prepare_*",
-      "mcp__plugin_serena_serena__initial_*",
-      "mcp__pencil"
+      "mcp__plugin_serena_serena__*",
+      "Bash(du:*)",
+      "Bash(wc:*)",
+      "Bash(file:*)",
+      "Bash(python3:*)",
+      "Bash(jq:*)",
+      "Bash(done)",
+      "Bash(xargs cat:*)",
+      "Bash(bash:*)",
+      "Bash(ls:*)",
+      "Bash(env:*)",
+      "Bash(grep:*)",
+      "Bash(sort:*)",
+      "Bash(claude:*)",
+      "Bash(node:*)",
+      "Bash(zsh:*)",
+      "Bash(pip:*)"
     ],
     "defaultMode": "plan"
   },
@@ -60,6 +55,26 @@
             "command": "afplay /System/Library/Sounds/Funk.aiff"
           }
         ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/vvsaito/.claude/scripts/cc-dashboard-ingest.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/vvsaito/.claude/scripts/cc-dashboard-ingest.sh"
+          }
+        ]
       }
     ]
   },
@@ -74,8 +89,10 @@
     "frontend-design@claude-plugins-official": true,
     "serena@claude-plugins-official": true,
     "figma@claude-plugins-official": true,
-    "laravel-boost@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "notion@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
   },
   "language": "日本語",
   "sandbox": {
@@ -93,7 +110,9 @@
         "files.pythonhosted.org",
         "crates.io",
         "packagist.org",
-        "repo.packagist.org"
+        "repo.packagist.org",
+        "mcp.notion.com",
+        "api.notion.com"
       ]
     },
     "filesystem": {
@@ -110,5 +129,9 @@
       ]
     }
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "awaySummaryEnabled": false,
+  "tui": "fullscreen",
+  "skipAutoPermissionPrompt": true
 }
